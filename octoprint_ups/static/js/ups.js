@@ -93,15 +93,15 @@ $(function() {
                 status_text = "Offline";
             }
 
-            content += "<td>Status</td><td>" + status_text + "</td></tr>"
+            content += "<tr><td>Status</td><td>" + status_text + "</td></tr>"
 
             if (status_text != "Offline") {
                 if (self.vars().hasOwnProperty('battery.charge')) {
-                    content += "<td>Charge</td><td>" + parseInt(self.vars()["battery.charge"]) + "%</td></tr>"
+                    content += "<tr><td>Charge</td><td>" + parseInt(self.vars()["battery.charge"]) + "%</td></tr>"
                 }
 
                 if (self.vars().hasOwnProperty('battery.runtime')) {
-                    content += "<td>Runtime</td><td>" + parseInt(self.vars()["battery.runtime"]) / 60 + " min</td></tr>"
+                    content += "<tr><td>Runtime</td><td>" + parseInt(self.vars()["battery.runtime"]) / 60 + " min</td></tr>"
                 }
             }
 /*
