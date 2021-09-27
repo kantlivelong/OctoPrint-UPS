@@ -10,3 +10,17 @@
   border-radius: 2px;
   transition: 250ms ease;
 }
+#navbar_plugin_ups .popover {
+  width: auto !important;
+}
+#navbar_plugin_ups .popover table {
+  width: auto !important;
+  table-layout: auto !important;
+}
+#navbar_plugin_ups .popover td {
+  width: auto !important;
+  white-space: nowrap;
+}
+#navbar_plugin_ups .popover td:last-child {
+  padding-left: 1em;
+}
