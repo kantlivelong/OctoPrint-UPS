@@ -81,7 +81,7 @@ class UPS(octoprint.plugin.StartupPlugin,
                 return True
             except (NameError, AttributeError):
                 pass
-            except (EOFError, BrokenPipeError):
+            except (EOFError, BrokenPipeError, ConnectionAbortedError):
                 self._logger.warning("Connection lost. Reconnecting...")
 
         try:
