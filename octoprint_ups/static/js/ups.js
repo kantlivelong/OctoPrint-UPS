@@ -134,15 +134,18 @@ $(function() {
             }).done(function(data) {
                 console.log(data);
                 self.available_upses(data.result);
+            }).fail(function(data) {
+                console.warn("Failed fetching UPS list. Falling back to config value.");
+                alert("Unable to fetch UPS list.");
+
+                self.available_upses([self.settings.plugins.ups.ups()]);
             });
         };
 
         self.onBeforeBinding = function() {
             self.settings = self.settingsViewModel.settings;
-        };
 
-        self.onSettingsShown = function () {
-            self.updateUPSList();
+            self.available_upses([self.settings.plugins.ups.ups()]);
         };
 
         self.onDataUpdaterPluginMessage = function(plugin, data) {

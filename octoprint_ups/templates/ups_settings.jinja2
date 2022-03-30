@@ -36,7 +36,7 @@
     <div class="control-group">
         <label class="control-label">UPS</label>
         <div class="controls">
-            <select data-bind="options: available_upses, value: settings.plugins.ups.ups">
+            <select data-bind="options: available_upses, value: settings.plugins.ups.ups, click: function() { $root.updateUPSList(); }">
             </select>
             <a title="Refresh" href="#" data-bind="click: function() { $root.updateUPSList(); }">
                 <i class="icon-refresh"></i>

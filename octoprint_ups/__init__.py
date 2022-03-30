@@ -236,7 +236,6 @@ class UPS(octoprint.plugin.StartupPlugin,
                 res = ups.list_ups()
                 return jsonify(result=list(res.keys()))
             except:
-                # TODO: Can be done diff? idk?
                 return make_response("Error getting UPS list", 500)
 
 
